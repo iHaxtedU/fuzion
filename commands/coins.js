@@ -20,6 +20,7 @@ let coinEmbed = new Discord.RichEmbed()
 if(!user1) message.channel.send(coinEmbed).then(msg => {msg.delete(5000)})
   
 if(user1){
+let coins = require("../coins.json");
 let usercoins = coins[user1.id].coins;
   
   if(!coins[user1.id]){
