@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
+let coins = require("./coins.json");
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -38,6 +39,12 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
+  
+  if(!coins[message.author.id]){
+  coins[message.author.id] = {
+    coins: 0
+  };
+}
 
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
