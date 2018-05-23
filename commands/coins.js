@@ -9,13 +9,13 @@ if(!coins[message.author.id]){
 }
   
 let user1 = message.mentions.users.first()
+let uCoins = coins[message.author.id].coins;
 
 let coinEmbed = new Discord.RichEmbed()
 .setAuthor(bot.user.username, bot.user.avatarURL)
 .setColor("00FF00")
 .addField("You Have", `${uCoins} FUZCoins`);
   
-  let uCoins = coins[message.author.id].coins;
   
 if(!user1) message.channel.send(coinEmbed).then(msg => {msg.delete(5000)})
 
