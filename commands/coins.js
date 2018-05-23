@@ -9,9 +9,9 @@ if(!coins[message.author.id]){
 }
   
 let user1 = message.mentions.users.first()
-let ccoins = coins[user1.id].coins;
-if(!ccoins[user1.id]){
-  ccoins[user1.id] = {
+let ccoins = coins[user1].coins;
+if(!ccoins[user1]){
+  ccoins[user1] = {
     coins: 100
   };
 }
