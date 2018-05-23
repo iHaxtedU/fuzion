@@ -21,6 +21,12 @@ if(!user1) message.channel.send(coinEmbed).then(msg => {msg.delete(5000)})
   
 if(user1){
 let usercoins = coins[user1.id].coins;
+  
+  if(!coins[user1.id]){
+  coins[user1.id] = {
+    coins: 100
+  };
+}
 
 let usercoin1s = new Discord.RichEmbed()
 .setAuthor(bot.user.username, bot.user.avatarURL)
