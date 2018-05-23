@@ -19,7 +19,7 @@ let coinEmbed = new Discord.RichEmbed()
   
 if(!user1) message.channel.send(coinEmbed).then(msg => {msg.delete(5000)})
 
-let usercoins = coins[user1.id].bal;
+let usercoins = coins[user1.id].coins;
 
 let usercoin1s = new Discord.RichEmbed()
 .setAuthor(bot.user.username, bot.user.avatarURL)
