@@ -6,9 +6,7 @@ let m = "**"
 let help = new Discord.RichEmbed()
 .setAuthor(bot.user.username, bot.user.avatarURL)
 .setColor("#42ebf4")
-.addField(">ping", `${m} Used To Check The Response Time Of The Bot ${m}`)
-.addField(">coins", `${m} Check How Many FUZCoins You Have ${m}`)
-.addField(">pay", `${m} Pay Someone An Ammount Of FUZCoins ${m}`);
+.addField(">ping", `Used To Check The Response Time Of The Bot `);
 
 message.channel.send(help);
 }
