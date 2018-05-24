@@ -6,12 +6,14 @@ let m = "**"
 let help = new Discord.RichEmbed()
 .setAuthor(bot.user.username, bot.user.avatarURL)
 .setColor("#42ebf4")
-.addField(">ping", `Used To Check The Response Time Of The Bot `);
+.addField(">ping", `${m}Used To Check The Response Time Of The Bot.${m}`)
+.addField(">coins", `${m}Check Your Balance Of FUZCoins.${m}`)
+.addField(">pay", `${m}Pay A User FUZCoins.${m}`);
 
 message.channel.send(help);
 }
 
-  let ch = ("cmds""help")
+
 module.exports.help = {
-  name: ch
+  name: "help"
 }
