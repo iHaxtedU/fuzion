@@ -12,5 +12,5 @@ message.channel.send(help);
 }
 
 module.exports.help = {
-  name: "cmds, help"
+  name: "cmds"
 }
