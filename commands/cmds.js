@@ -11,7 +11,7 @@ let help = new Discord.RichEmbed()
 message.channel.send(help);
 }
 
-  let ch = "cmds","help"
+  let ch = {"cmds","help"}
 module.exports.help = {
   name: ch
 }
